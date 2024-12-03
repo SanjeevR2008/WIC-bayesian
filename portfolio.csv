@@ -1,0 +1,21 @@
+Symbol,Description,Quantity,Currency,LastPrice,PricePaid,DayChange,ProfitLoss,MarketValue,ProfitLossPercentage
+AMZN,Amazon.com Inc.,45,USD,207.89,189.74,2.15,816.75,9355.05,9.57
+ASGN,ASGN Inc,48,USD,91.55,95.93,0.57,-210.24,4394.4,-4.57
+AVUV,American Century ETF Trust - Avantis U.S. Small Ca,82,USD,105.49,98.69,0.21,557.60,8650.18,6.89
+EVRG,Evergy Inc,10,USD,64.63,59.74,-0.37,48.90,646.3,8.19
+EXR,Extra Space Storage Inc,29,USD,170.96,171.13,-1.72,-4.93,4957.84,-0.10
+IQV,IQVIA Holdings Inc,39,USD,200.84,230.98,-0.59,"-1,175.46",7832.76,-13.05
+IYF,BlackRock Institutional Trust Company N.A. - iShares U.S. Financials ETF,75,USD,119.05,106.93,0.08,909.00,8928.75,11.33
+KMI,Kinder Morgan Inc - Ordinary Shares - Class P,200,USD,28.27,23.69,0.20,916.00,5654,19.33
+MAA,"Mid-America Apartment Communities, Inc.",19,USD,164.16,153.41,-1.04,204.25,3119.04,7.01
+NU,Nu Holdings Ltd - Ordinary Shares Class A,300,USD,12.53,13.69,-1.00,-348.00,3759,-8.47
+NVDA,NVIDIA Corp,100,USD,138.25,135.34,2.91,291.00,13825,2.15
+OZK,Bank OZK,102,USD,49.97,44.89,0.03,518.16,5096.94,11.32
+PEX,ProShares Trust - ProShares Global Listed Private Equity ETF,57,USD,29.087,28.23,0.25,48.85,1657.959,3.04
+PSA,Public Storage,12,USD,348.05,343.7,-3.31,52.20,4176.6,1.27
+PSP,Invesco Capital Management LLC - Invesco Global Listed Private Equity ETF,50,USD,71.6506,67.61,0.45,202.03,3582.53,5.98
+SMCI,Super Micro Computer Inc,104,USD,32.64,47.73,-2.43,"-1,569.36",3394.56,-31.62
+T,"AT&T, Inc.",125,USD,23.16,21.75,-0.11,176.25,2895,6.48
+VZ,Verizon Communications Inc,115,USD,44.34,43.83,-0.04,58.65,5099.1,1.16
+B-T-4.750-15022041,T-BOND 4.75% 15-Feb-2041,2,USD,989.81734,989.21265,0.00,1.21,1979.63468,0.06
+B-T-6.250-15052030,T-BOND 6.250% 15-May-2030,2,USD,1038.176705,1048.51194,0.00,-20.67,2076.35341,-0.99

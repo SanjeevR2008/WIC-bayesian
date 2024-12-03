@@ -22,11 +22,24 @@ cov_matrix = returns.cov() * 252
 print("Annual Returns:\n", annual_returns)
 print("Covariance Matrix:\n", cov_matrix)
 
-mu = expected_returns.capm_return(price_data)
+mu = expected_returns.mean_historical_return(price_data)
+print(mu)
 S = risk_models.sample_cov(price_data)
+# custom_weights = {ticker: 0 for ticker in tickers}
+# custom_weights['NVDA'] = 0.14
 ef = EfficientFrontier(mu, S)
 ef.add_constraint(lambda w: w <= 0.15)
+# ef.set_weights(custom_weights)
+# ef.add_constraint(lambda w: w[tickers.index('NVDA')] == 0.15)
+# for i, ticker in enumerate(tickers):
+#     if ticker != 'NVDA':
+#         ef.add_constraint(lambda w, i=i: w[i] <= 0.15)
+positive_weight_stocks = ['KMI', 'MAA', 'NU']  # Stocks that must have positive weights
 
+# Add constraints for positive weights
+for ticker in positive_weight_stocks:
+    ef.add_constraint(lambda w, ticker=ticker: w[tickers.index(ticker)] >= 0.01)
+ef.add_constraint(lambda w: w[tickers.index('KMI')] == 0.02)
 weights = ef.max_sharpe()
 cleaned_weights = ef.clean_weights()
 print("Optimized weights:\n", cleaned_weights)
