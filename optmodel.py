@@ -10,9 +10,6 @@ print(portfolio.head())
 tickers = portfolio['Symbol'].dropna().unique().tolist()
 tickers.pop()
 tickers.pop()
-bonds_sym = ['B-T-4.750-15022041', 'B-T-6.250-15052030']
-bonds = portfolio[portfolio['Symbol'].isin(bonds_sym)]
-bond_allocation_percentage = bonds['MarketValue'].sum() / portfolio['MarketValue'].sum() 
 
 
 price_data = yf.download(tickers, start="2015-12-02", end="2024-12-01")['Adj Close']
@@ -35,7 +32,7 @@ positive_weight_stocks = ['KMI', 'MAA', 'NU']  # Stocks that must have positive 
 # Add constraints for positive weights
 for ticker in positive_weight_stocks:
     ef.add_constraint(lambda w, ticker=ticker: w[tickers.index(ticker)] >= 0.01)
-ef.add_constraint(lambda w: w[tickers.index('KMI')] == 0.02)
+ef.add_constraint(lambda w: w[tickers.index('KMI')] == 0.04)
 # ef.add_constraint(lambda w: w[tickers.index('B-T-4.750-15022041')] == 0.02)
 # ef.add_constraint(lambda w: w[tickers.index('B-T-6.250-15052030')] == 0.02)
 weights = ef.max_sharpe()
